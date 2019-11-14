@@ -1,0 +1,38 @@
+Please enter your information
+<form action="">
+    <div>
+        <p>
+            This is normal input with no label associated. People who use screen reader will not understand what
+            to put in this input.
+        </p>
+        <label>First name:</label>
+        <input id="first-name" type="text">
+    </div>
+    <hr>
+    <div>
+        <p>
+            This input with label associated.
+        </p>
+        <label for="last-name">Last name:</label>
+        <input id="last-name" type="text">
+    </div>
+    <hr>
+    <div>
+        <p>
+            This input have aria-required attribute. So screen reader can say that this form is required.
+        </p>
+        <label for="nickname">Nickname:</label>
+        <input id="nickname" type="text" aria-required="true" required>
+    </div>
+
+<hr>
+
+    <div tabindex="0" role="button" style="width: 500px; background: lightskyblue;">
+        For screen reader, you can make div element act like button element by adding button role and tabindex 0.
+    </div>
+    <hr>
+    <button tabindex="-1" aria-hidden="true" style="background: lightcoral; font-size: 20px;">
+        Screen reader will not read this button because of aria-hidden attribute and use tabindex -1 to make its unfocusable by tab key.
+    </button>
+
+</form>
